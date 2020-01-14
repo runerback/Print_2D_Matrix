@@ -1,7 +1,11 @@
 namespace Print2dMatrix
 {
-    public interface IMatrix
+    public interface IMatrix<T>
     {
-        ICell[,] Value { get; }
+        ICell<T>[,] Value { get; }
+    }
+
+    public interface IMatrix : IMatrix<int>
+    {
     }
 }
